@@ -1,9 +1,9 @@
 import { App, Construct, Stack, StackProps } from '@aws-cdk/core';
 
-export class MyStack extends Stack {
+export class AppSyncStack extends Stack {
   constructor(scope: Construct, id: string, props: StackProps = {}) {
     super(scope, id, props);
-
+    
     // define resources here...
   }
 }
@@ -16,7 +16,7 @@ const devEnv = {
 
 const app = new App();
 
-new MyStack(app, 'my-stack-dev', { env: devEnv });
+new AppSyncStack(app, 'my-stack-dev', { env: devEnv });
 // new MyStack(app, 'my-stack-prod', { env: prodEnv });
 
 app.synth();

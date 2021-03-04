@@ -9,6 +9,11 @@ const project = new AwsCdkTypeScriptApp({
   deps: [
     '@mhlabs/cfn-diagram'
   ],
+  cdkDependencies: [
+    '@aws-cdk/aws-appsync',
+    '@aws-cdk/aws-dynamodb'
+  ]
+
   /* AwsCdkTypeScriptAppOptions */
   // appEntrypoint: 'main.ts',                                                 /* The CDK app's entrypoint (relative to the source directory, which is "src" by default). */
   // cdkDependencies: undefined,                                               /* Which AWS CDK modules (those that start with "@aws-cdk/") this app uses. */
